@@ -19,6 +19,6 @@ rl.question ('Masukan Nama Anda: ', (nama)=>{
         const file=fs.readFileSync('data/contact.json', 'utf-8');
         const kontaks=JSON.parse(file);
         kontaks.push(kontak);
-        fs.writeFileSync('data/contact.json',JSON.stringify(kontaks));
+        fs.writeFileSync('data/contact.json',JSON.stringify(kontaks, null, 2));
     rl.close()
 })})})});
